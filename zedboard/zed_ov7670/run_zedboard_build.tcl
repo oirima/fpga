@@ -13,14 +13,14 @@ set_property board_part $boardName [current_project]
 #
 read_vhdl [glob ./sources/*.vhd]
 read_vhdl ov7670_top.vhd
-read_ip ./ip/blk_mem/blk_mem_gen_0.xci
+read_ip ./ip/blk_mem/blk_mem.xcix
 read_xdc zed_board.xdc
 
 #
 # STEP#2: Generate IPs
 #
-set_property synth_checkpoint_mode None [get_files ./ip/blk_mem/blk_mem_gen_0.xci]
-generate_target all [get_files ./ip/blk_mem/blk_mem_gen_0.xci]
+# set_property synth_checkpoint_mode None [get_files ./ip/blk_mem/blk_mem.xcix]
+generate_target all [get_files ./ip/blk_mem/blk_mem.xcix]
 
 #
 # STEP#3:
