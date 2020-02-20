@@ -15,6 +15,7 @@ read_vhdl [glob ./sources/*.vhd]
 read_vhdl ov7670_top.vhd
 read_ip ./ip/blk_mem/blk_mem.xcix
 read_xdc zed_board.xdc
+read_xdc zed_timing.xdc
 
 #
 # STEP#2: Generate IPs
